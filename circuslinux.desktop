@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Circus Linux
+Exec=/usr/X11R6/bin/circuslinux
+Icon=circuslinux.png
+Type=Application
+Terminal=0
