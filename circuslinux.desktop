@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=Circus Linux
 Comment="Circus Linux!" is a clone of the Atari 2600 game "Circus Atari"
-Commnet[pl]="Circus Linux!" jest klonem gry z Atari 2600 "Circus Atari"
+Comment[pl]="Circus Linux!" jest klonem gry z Atari 2600 "Circus Atari"
 Exec=circuslinux -f
 Icon=circuslinux.png
 Type=Application
