@@ -1,5 +1,5 @@
-Summary:	"Circus Linux!" is a clone of the Atari 2600 game "Circus Atari"
-Summary(pl):	"Circus Linux!" jest klonem gry z Atari 2600 "Circus Atari"
+Summary:	"Circus Linux!" - a clone of the Atari 2600 game "Circus Atari"
+Summary(pl):	"Circus Linux!" - klon gry z Atari 2600 "Circus Atari"
 Name:		circuslinux
 Version:	1.0.3
 Release:	2
@@ -18,10 +18,10 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
-"Circus Linux!" is a clone of the Atari 2600 game "Circus Atari", which is
-itself a clone of an earlier arcade game named, simply "Circus".
+"Circus Linux!" is a clone of the Atari 2600 game "Circus Atari",
+which is itself a clone of an earlier arcade game named, simply
+"Circus".
 
 The object is to move a teeter-totter back and forth across the screen
 to bounce clowns up into the air. When they reach the top, they pop
@@ -31,14 +31,15 @@ rows of balloons and then fall back down.
 
 %description -l pl
 "Circus Linux!" jest klonem gry z Atari 2600 - "Circus Atari", która z
-kolei sama jest klonem wcze¶niejszej gry zrêczno¶ciowej, nazywaj±cej siê
-po prostu "Circus".
+kolei sama jest klonem wcze¶niejszej gry zrêczno¶ciowej, nazywaj±cej
+siê po prostu "Circus".
 
 Celem gry jest przesuwanie hu¶tawki w poprzek ekranu tak aby podbijaæ
-skacz±cych clownów do góry. Kiedy clown wyskakuje, zbija czê¶æ z baloników
-lataj±cych w rzêdach pod sufitem, a potem spada z powrotem na dó³.
+skacz±cych clownów do góry. Kiedy clown wyskakuje, zbija czê¶æ z
+baloników lataj±cych w rzêdach pod sufitem, a potem spada z powrotem
+na dó³.
 
-Motyw gry jest podobny do klasycznych gier - "Breakout" i "Arkanoid"
+Motyw gry jest podobny do klasycznych gier - "Breakout" i "Arkanoid".
 
 %prep
 %setup -q
@@ -46,7 +47,6 @@ Motyw gry jest podobny do klasycznych gier - "Breakout" i "Arkanoid"
 %patch1 -p1
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -55,12 +55,12 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
@@ -71,5 +71,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS.txt CHANGES.txt FAQ.txt README.txt README-SDL.txt TODO.txt
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
-%{_applnkdir}/Games/Arcade/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
