@@ -1,6 +1,9 @@
 [Desktop Entry]
 Name=Circus Linux
-Exec=/usr/X11R6/bin/circuslinux
+Comment="Circus Linux!" is a clone of the Atari 2600 game "Circus Atari"
+Commnet[pl]="Circus Linux!" jest klonem gry z Atari 2600 "Circus Atari"
+Exec=circuslinux
 Icon=circuslinux.png
 Type=Application
 Terminal=0
+# vi: encoding=utf-8
