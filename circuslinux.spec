@@ -11,8 +11,6 @@ Source2:	%{name}.png
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-version.patch
 URL:		http://www.newbreedsoftware.com/circus-linux/
-BuildRequires:	libvorbis-devel
-BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -47,7 +45,8 @@ Motyw gry jest podobny do klasycznych gier - "Breakout" i "Arkanoid"
 %patch1 -p1
 
 %build
-aclocal
+rm -f missing
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
@@ -58,6 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
+
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
@@ -69,3 +69,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS.txt CHANGES.txt FAQ.txt README.txt README-SDL.txt TODO.txt
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
+%{_applnkdir}/Games/Arcade/*
+%{_pixmapsdir}/*
