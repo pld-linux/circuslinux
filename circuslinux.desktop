@@ -7,4 +7,5 @@ Exec=circuslinux -f
 Icon=circuslinux.png
 Type=Application
 Terminal=false
+Categories=Game;ArcadeGame;
 # vi: encoding=utf-8
