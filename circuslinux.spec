@@ -13,6 +13,8 @@ Patch1:		%{name}-version.patch
 URL:		http://www.newbreedsoftware.com/circus-linux/
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _prefix         /usr/X11R6
