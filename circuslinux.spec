@@ -6,6 +6,8 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/circus-linux/%{name}-%{version}.tar.gz
+Source1:	%{name}-desktop.patch
+Source2:	%{name}.png
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-version.patch
 URL:		http://www.newbreedsoftware.com/circus-linux/
@@ -53,9 +55,11 @@ aclocal
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
