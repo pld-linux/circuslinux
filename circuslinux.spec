@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/circus-linux/%{name}-%{version}.tar.gz
-Source1:	%{name}-desktop.patch
+Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-version.patch
