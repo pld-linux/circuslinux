@@ -1,0 +1,12 @@
+diff -Naur circuslinux-1.0.3/configure.in circuslinux-1.0.3-p/configure.in
+--- circuslinux-1.0.3/configure.in	Sun Jun 11 03:50:39 2000
++++ circuslinux-1.0.3-p/configure.in	Sat Sep  7 18:24:18 2002
+@@ -3,7 +3,7 @@
+ 
+ 
+ dnl Setup for automake
+-AM_INIT_AUTOMAKE(circuslinux,1.0.2)
++AM_INIT_AUTOMAKE(circuslinux,1.0.3)
+ 
+ dnl Detect host info
+ AC_CANONICAL_HOST

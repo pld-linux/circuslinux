@@ -1,0 +1,39 @@
+diff -Naur circuslinux-1.0.3/Makefile.am circuslinux-1.0.3-p/Makefile.am
+--- circuslinux-1.0.3/Makefile.am	Sun Apr 29 08:53:26 2001
++++ circuslinux-1.0.3-p/Makefile.am	Sat Sep  7 18:16:29 2002
+@@ -29,8 +29,6 @@
+ bin_PROGRAMS = circuslinux
+ 
+ circuslinux_SOURCES = circuslinux.c
+-circuslinux_CFLAGS  = CFLAGS
+-circuslinux_LIBS    = LIBS
+ 
+ docdir = $(prefix)/share/doc/$(PACKAGE)-$(VERSION)
+ 
+diff -Naur circuslinux-1.0.3/data/Makefile.am circuslinux-1.0.3-p/data/Makefile.am
+--- circuslinux-1.0.3/data/Makefile.am	Sun Jun  4 11:04:58 2000
++++ circuslinux-1.0.3-p/data/Makefile.am	Sat Sep  7 18:19:58 2002
+@@ -4,16 +4,16 @@
+ 
+ 
+ install:
+-	$(SHELL) ./../mkinstalldirs $(pkgdatadir)
+-	$(SHELL) ./../mkinstalldirs $(pkgdatadir)/data
+-	cp -r images music sounds $(pkgdatadir)/data/
+-	chmod -R 755 $(pkgdatadir)
++	$(SHELL) ./../mkinstalldirs $(DESTDIR)$(pkgdatadir)
++	$(SHELL) ./../mkinstalldirs $(DESTDIR)$(pkgdatadir)/data
++	cp -r images music sounds $(DESTDIR)$(pkgdatadir)/data/
++	chmod -R 755 $(DESTDIR)$(pkgdatadir)
+ 
+ # Directories in EXTRA_DIST doen't work?
+ dist-hook:
+-	cp -r -p images $(distdir)
+-	cp -r -p music  $(distdir)
+-	cp -r -p sounds  $(distdir)
++	cp -r -p images $(DESTDIR)$(distdir)
++	cp -r -p music  $(DESTDIR)$(distdir)
++	cp -r -p sounds  $(DESTDIR)$(distdir)
+ 
+ uninstall:
+ 	@echo "Removing $(pkgdatadir) ..."
