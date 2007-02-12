@@ -1,5 +1,5 @@
 Summary:	"Circus Linux!" - a clone of the Atari 2600 game "Circus Atari"
-Summary(pl.UTF-8):   "Circus Linux!" - klon gry z Atari 2600 "Circus Atari"
+Summary(pl.UTF-8):	"Circus Linux!" - klon gry z Atari 2600 "Circus Atari"
 Name:		circuslinux
 Version:	1.0.3
 Release:	2
