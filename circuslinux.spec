@@ -1,5 +1,5 @@
 Summary:	"Circus Linux!" - a clone of the Atari 2600 game "Circus Atari"
-Summary(pl):	"Circus Linux!" - klon gry z Atari 2600 "Circus Atari"
+Summary(pl.UTF-8):   "Circus Linux!" - klon gry z Atari 2600 "Circus Atari"
 Name:		circuslinux
 Version:	1.0.3
 Release:	2
@@ -29,15 +29,15 @@ rows of balloons and then fall back down.
 
 (The gameplay is similar to the classics "Breakout" and "Arkanoid.")
 
-%description -l pl
-"Circus Linux!" jest klonem gry z Atari 2600 - "Circus Atari", która z
-kolei sama jest klonem wcze¶niejszej gry zrêczno¶ciowej, nazywaj±cej
-siê po prostu "Circus".
+%description -l pl.UTF-8
+"Circus Linux!" jest klonem gry z Atari 2600 - "Circus Atari", ktÃ³ra z
+kolei sama jest klonem wczeÅ›niejszej gry zrÄ™cznoÅ›ciowej, nazywajÄ…cej
+siÄ™ po prostu "Circus".
 
-Celem gry jest przesuwanie hu¶tawki w poprzek ekranu tak aby podbijaæ
-skacz±cych clownów do góry. Kiedy clown wyskakuje, zbija czê¶æ z
-baloników lataj±cych w rzêdach pod sufitem, a potem spada z powrotem
-na dó³.
+Celem gry jest przesuwanie huÅ›tawki w poprzek ekranu tak aby podbijaÄ‡
+skaczÄ…cych clownÃ³w do gÃ³ry. Kiedy clown wyskakuje, zbija czÄ™Å›Ä‡ z
+balonikÃ³w latajÄ…cych w rzÄ™dach pod sufitem, a potem spada z powrotem
+na dÃ³Å‚.
 
 Motyw gry jest podobny do klasycznych gier - "Breakout" i "Arkanoid".
 
